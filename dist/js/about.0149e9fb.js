@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkbinanceapp"]=self["webpackChunkbinanceapp"]||[]).push([[443],{8307:function(n,a,e){e.r(a),e.d(a,{default:function(){return b}});var u=e(3396);const t={class:"about"},c=(0,u._)("h1",null,"This is an about page",-1),r=[c];function s(n,a){return(0,u.wg)(),(0,u.iD)("div",t,r)}var i=e(89);const p={},o=(0,i.Z)(p,[["render",s]]);var b=o}}]);
+//# sourceMappingURL=about.0149e9fb.js.map
