@@ -1,25 +1,19 @@
-#!/usr/bin/env sh
-
-# остановить публикацию при ошибках
+# abort on errors
 set -e
 
-# сборка
-yarn run build
+# build
+echo Linting..
+npm run lint
+echo Building. this may take a minute...
+npm run build
 
-# переход в каталог сборки
-cd dist
+# if you are deploying to a custom domain add a CNAME (uncomment the next 3 lines)
+#cd docs
+#echo 'yourcustomdomain.com' > CNAME
+#cd -
 
-# если вы публикуете на пользовательский домен
-# echo 'www.example.com' > CNAME
-
-git init
+# deploy
+echo Deploying..
 git add -A
 git commit -m 'deploy'
-
-# если вы публикуете по адресу https://<USERNAME>.github.io
-#git push -f git@github.com:<dmsuh>/<dmsuh>.github.io.git master
-
-# если вы публикуете по адресу https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:dmsuh/BinanceApp.git master:gh-pages
-
-cd -
+git push -f https://github.com/dmsuh/BinanceApp.git master
