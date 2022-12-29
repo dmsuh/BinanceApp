@@ -4,7 +4,7 @@
 set -e
 
 # сборка
-npm run build
+yarn run build
 
 # переход в каталог сборки
 cd dist
